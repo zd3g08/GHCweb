@@ -630,11 +630,12 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
     position:relative;
     top: -800px;
     width: 100%;
-    height: 600px;
+    height: 900px;
     text-align: center;
     margin: 0px auto 0 auto;
     border-top: 1px solid rgba(#fff,.3);
     border-bottom: 1px solid rgba(#fff,.3);
+    z-index: 100;
     h3 {
         margin: 35px 0 25px 0;
         font-size: 2.5rem;
@@ -643,12 +644,80 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
         font-weight: 800;
         color: #fff;
     }
+    p {
+      line-height: 4rem;
+    }
     article {
         width: 100%;
         margin: 0 auto;
     }
 }
 
+.confirm {
+    position:relative;
+    top: 0px;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    margin: 0px auto 0 auto;
+    border-top: 1px solid rgba(#fff,.3);
+    border-bottom: 1px solid rgba(#fff,.3);
+    color: #1f1f1f;
+    z-index: 100;
+    h3 {
+        margin: 40px 0 15px 0;
+        font-size: 2rem;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 1.35px;
+        font-weight: 800;
+    }
+    p {
+      line-height: 3rem;
+      padding: 10px;
+      background-color: #fff;
+      margin-bottom: 15px;
+    }
+    p.kakunin_title {
+      line-height: 1rem;
+      background-color: transparent;
+    }
+    p.thanks_p {
+      line-height: 1.75rem;
+      padding: 10px 15px;
+    }
+    article.confirm {
+        width: 100%;
+        background-color: rgba(#fff,.7);
+        padding: 0 15%;
+        text-align: left;
+    }
+    label {
+      background-color: #000000;
+      padding: 5px 20px;
+      border-radius: 2px;
+      line-height: 2rem;
+      color: #fff;
+      font-size: .9rem;
+    }
+    .syusei {
+      background-color: #0073b9;
+      padding: 5px 10px;
+      border-radius: 2px;
+      line-height: 2rem;
+      color: #fff;
+      margin-top: 20px;
+      margin-right: 20px;
+      font-size: 1.2rem;
+    }
+    .sousin {
+      background-color: #db143c;
+      padding: 5px 10px;
+      border-radius: 2px;
+      line-height: 2rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+}
 
 
 //contact formここから
@@ -699,7 +768,7 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
 
 /* Icons ---------------------------------- */
 #name{
-    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-image: url("../images/icon_name.svg");
     background-size: 20px 20px;
     background-position: 11px center;
     background-repeat: no-repeat;
@@ -710,28 +779,42 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
 }
 
 #name:focus{
-    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-image: url("../images/icon_name2.svg");
     background-size: 20px 20px;
     background-position: 11px center;
     background-repeat: no-repeat;
 }
 
 #email{
-    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-image: url("../images/icon_mail.svg");
     background-size: 20px 20px;
     background-position: 11px center;
     background-repeat: no-repeat;
 }
 
 #email:focus{
-    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-image: url("../images/icon_mail2.svg");
     background-size: 20px 20px;
   background-position: 11px center;
     background-repeat: no-repeat;
 }
 
-#comment{
-    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+#subject{
+    background-image: url("../images/icon_subject.svg");
+    background-size: 20px 20px;
+    background-position: 11px center;
+    background-repeat: no-repeat;
+}
+
+#subject:focus{
+    background-image: url("../images/icon_subject.svg");
+    background-size: 20px 20px;
+    background-position: 11px center;
+    background-repeat: no-repeat;
+}
+
+#message{
+    background-image: url("../images/icon_message.svg");
     background-size: 20px 20px;
     background-position: 11px 11px;
     background-repeat: no-repeat;
@@ -784,7 +867,7 @@ input:focus, textarea:focus {
 
 footer {
     position: absolute;
-    top: 4050px;
+    top: 4250px;
     right: 0;
     left: 0;
     height: 500px;

@@ -140,22 +140,33 @@
         <section class="contact"  id="contact">
             <article>
             <h3>CONTACT</h3>
+        <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
                 <div id="form-main">
                     <div id="form-div">
-                        <form class="form" id="form1">
+                        <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
+            <?php if ($err_msg != ''): ?>
+                    <?php echo $err_msg; ?>
+            <?php endif; ?>
                             <p class="name">
-                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="お名前" value="<?php echo $name; ?>" id="name" />
                             </p>
                             <p class="email">
-                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="メールアドレス" value="<?php echo $email; ?>" />
                             </p>
-                            <p class="text">
-                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+                            <p class="subject">
+                                <input name="subject" type="text" class="validate[required,custom[email]] feedback-input" id="subject"  name="subject" placeholder="件名" value="<?php echo $subject; ?>" />
+                            </p>
+                            <p class="message">
+                                <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="message" placeholder="本文"><?php echo $message; ?></textarea>
                             </p>
                             <div class="submit">
-                                <input type="submit" value="送信" id="button-blue" />
-                                <div class="ease"></div>
-                            </div>
+                                        <button type="submit" id="button-blue">確認画面へ</button>
+<!--                                 <input type="submit" value="送信" id="button-blue" />
+                                <div class="messase"></div>
+ --><!--             <?php if ($complete_msg != ''): ?>
+                    <?php echo $complete_msg; ?>
+            <?php endif; ?>
+ -->                            </div>
                         </form>
                     </div>
                 </div>
