@@ -119,7 +119,7 @@ EOM;
                         <p><?php echo nl2br($message); ?></p>
                     </div>
                 </div>
-            <input class="syusei" type="button" value="内容を修正する" onclick="history.back(-1)#contact">
+            <input class="syusei" type="button" value="内容を修正する" onclick="history.back(-1)">
             <button class="sousin" type="submit" name="submit">送信する</button>
         </form>
     </div>
