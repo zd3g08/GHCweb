@@ -1,3 +1,9 @@
+<?php
+// htmlentitiesのショートカット関数
+function he($str){
+    return htmlentities($str, ENT_QUOTES, "UTF-8");
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -145,20 +151,17 @@
                 <div id="form-main">
                     <div id="form-div">
                         <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
-            <?php if ($err_msg != ''): ?>
-                    <?php echo $err_msg; ?>
-            <?php endif; ?>
                             <p class="name">
-                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="お名前" value="<?php echo $name; ?>" id="name" />
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="お名前" value="<?php echo he($name); ?>" id="name" />
                             </p>
                             <p class="email">
-                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="メールアドレス" value="<?php echo $email; ?>" />
+                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="メールアドレス" value="<?php echo he($email); ?>" />
                             </p>
                             <p class="kenmei">
-                                <input name="kenmei" type="text" class="validate[required,custom[onlyLetter]] feedback-input" id="kenmei"  name="kenmei" placeholder="件名" value="<?php echo $kenmei; ?>" />
+                                <input name="kenmei" type="text" class="validate[required,custom[onlyLetter]] feedback-input" id="kenmei"  name="kenmei" placeholder="件名" value="<?php echo he($kenmei); ?>" />
                             </p>
                             <p class="message">
-                                <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="message" placeholder="本文"><?php echo $message; ?></textarea>
+                                <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="message" placeholder="本文"><?php echo he($message); ?></textarea>
                             </p>
                             <div class="submit">
                                         <button type="submit" id="button-blue">確認画面へ</button>

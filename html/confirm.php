@@ -1,4 +1,9 @@
 <?php
+// htmlentitiesのショートカット関数
+function he($str){
+    return htmlentities($str, ENT_QUOTES, "UTF-8");
+}
+
     // フォームのボタンが押されたら
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // フォームから送信されたデータを各変数に格納
@@ -93,27 +98,27 @@ EOM;
     <h3>お問い合わせ内容の確認</h3>
     <div>
         <form action="confirm.php" method="post">
-                <input type="hidden" name="name" value="<?php echo $name; ?>">
-                <input type="hidden" name="email" value="<?php echo $email; ?>">
-                <input type="hidden" name="kenmei" value="<?php echo $kenmei; ?>">
-                <input type="hidden" name="message" value="<?php echo $message; ?>">
+                <input type="hidden" name="name" value="<?php echo he($name); ?>">
+                <input type="hidden" name="email" value="<?php echo he($email); ?>">
+                <input type="hidden" name="kenmei" value="<?php echo he($kenmei); ?>">
+                <input type="hidden" name="message" value="<?php echo he($message); ?>">
                 <p class="kakunin_title">お問い合わせ内容がよろしければ、「送信する」ボタンを押して下さい。</p>
                 <div>
                     <div>
                         <label>お名前</label>
-                        <p><?php echo $name; ?></p>
+                        <p><?php echo he($name); ?></p>
                     </div>
                     <div>
                         <label>メールアドレス</label>
-                        <p><?php echo $email; ?></p>
+                        <p><?php echo he($email); ?></p>
                     </div>
                     <div>
                         <label>件名</label>
-                        <p><?php echo $kenmei; ?></p>
+                        <p><?php echo he($kenmei); ?></p>
                     </div>
                     <div>
                         <label>お問い合わせ内容</label>
-                        <p><?php echo nl2br($message); ?></p>
+                        <p><?php echo nl2br(he($message)); ?></p>
                     </div>
                 </div>
             <input class="syusei" type="button" value="内容を修正する" onclick="history.back(-1)">
@@ -142,8 +147,7 @@ $(function() {
                 topBtn.stop().animate({ 'bottom': '20px' }, 100);
             }
         } else {
-            if (showFlag) {
-                showFlag = false;
+
                 topBtn.stop().animate({ 'bottom': '-50px' }, 100);
             }
         }
