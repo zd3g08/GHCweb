@@ -52,7 +52,7 @@
         <section class="news">
             <h3>NEWS</h3>
             <article>
-                2019年10月1日&nbsp;&nbsp;Webサイトをリニューアル
+                2019年10月15日&nbsp;&nbsp;Webサイトをリニューアル
             </article>
         </section><!-- newsここまで -->
         <section class="about" id="about">
@@ -67,7 +67,8 @@
             <article>
                 <h3>Service</h3>
                 <p>株式会社GHCのミッションは、<br><span>「人と人とのご縁を作ることで、社会の発展に貢献する」</span><br>こと。</p>
-                <p>ご相談者と長期的な関係構築を目指し、本音トークで納得のいくキャリア設計を、興味・能力・価値観・その他特性をもとに、ご支援いたします。</p>
+                <p><i class="fa fa-handshake-o fa-2x" aria-hidden="true"></i></p>
+                <p class="honne">ご相談者と長期的な関係構築を目指し、本音トークで納得のいくキャリア設計を、興味・能力・価値観・その他特性をもとに、ご支援いたします。</p>
             </article>
             <figure>
                 <img src="images/service.jpg" alt="サービス内容の画像">
@@ -75,11 +76,11 @@
         </section><!-- serviceここまで -->
         <section class="ceo" id="ceo">
             <article>
-                <h3>CEO Profile</h3>
+                <h3>CEO&nbsp;Profile</h3>
                 <h4>代表取締役&nbsp;&nbsp;川上光彦のご紹介</h4>
                 <p>六甲学院中学校・高等学校卒業。
                     一橋大学法学部卒業。三菱商事株式会社入社。金属グループ貴金属部に配属され、貴金属ディーリング、実需取引、宝飾品事業に従事。１０年間勤務後に起業独立。日印貿易、日中貿易、経営コンサル、M&Aコンサルを行う。</p>
-                <p>2012年よりエグゼクティブサーチのコンサルタントに従事。2015年株式会社GHCを設立。</p>
+                <p>2012年よりエグゼクティブサーチのコンサルタントに従事。2014年株式会社GHCを設立。</p>
             </article>
         </section><!-- ceoここまで -->
         <section class="triangle_2">
@@ -140,7 +141,7 @@
         <section class="contact"  id="contact">
             <article>
             <h3>CONTACT</h3>
-        <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+        <p class="contact_title">内容をご入力の上「確認画面へ」ボタンをクリックしてください。</p>
                 <div id="form-main">
                     <div id="form-div">
                         <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
@@ -153,20 +154,15 @@
                             <p class="email">
                                 <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="メールアドレス" value="<?php echo $email; ?>" />
                             </p>
-                            <p class="subject">
-                                <input name="subject" type="text" class="validate[required,custom[email]] feedback-input" id="subject"  name="subject" placeholder="件名" value="<?php echo $subject; ?>" />
+                            <p class="kenmei">
+                                <input name="kenmei" type="text" class="validate[required,custom[onlyLetter]] feedback-input" id="kenmei"  name="kenmei" placeholder="件名" value="<?php echo $kenmei; ?>" />
                             </p>
                             <p class="message">
                                 <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="message" placeholder="本文"><?php echo $message; ?></textarea>
                             </p>
                             <div class="submit">
                                         <button type="submit" id="button-blue">確認画面へ</button>
-<!--                                 <input type="submit" value="送信" id="button-blue" />
-                                <div class="messase"></div>
- --><!--             <?php if ($complete_msg != ''): ?>
-                    <?php echo $complete_msg; ?>
-            <?php endif; ?>
- -->                            </div>
+                            </div>
                         </form>
                     </div>
                 </div>

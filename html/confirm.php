@@ -4,7 +4,7 @@
         // フォームから送信されたデータを各変数に格納
         $name = $_POST["name"];
         $email = $_POST["email"];
-        $subject = $_POST["subject"];
+        $kenmei = $_POST["kenmei"];
         $message  = $_POST["message"];
     }
 
@@ -25,22 +25,19 @@
 {$name}　様
 
 お問い合わせありがとうございます。
-以下のお問い合わせ内容が送信されました。
-
+以下の内容が送信されました。
 =============================
-【 お名前 】　{$name}
-【 メール 】　{$email}
-【 件名 】　{$subject}
-【 内容 】
+■お名前：{$name}
+■メールアドレス：{$email}
+■件名：{$kenmei}
+■お問い合わせ内容：
 {$message}
 ==============================
-
 内容を確認の上、担当者から折り返しご連絡いたします。
 今しばらくお待ちください。
-
-※なお、こちらのメールアドレスは自動配信専用となっております。
-　ご返信いただいてもご返答はできかねますのでご了承ください。
-
+※なお、こちらのメールアドレスは送信専用となっております。
+　ご返信いただきましてもご返答はできかねますので
+　ご了承ください。
 
 株式会社GHC
 http://ghcjp.com/
@@ -98,7 +95,7 @@ EOM;
         <form action="confirm.php" method="post">
                 <input type="hidden" name="name" value="<?php echo $name; ?>">
                 <input type="hidden" name="email" value="<?php echo $email; ?>">
-                <input type="hidden" name="subject" value="<?php echo $subject; ?>">
+                <input type="hidden" name="kenmei" value="<?php echo $kenmei; ?>">
                 <input type="hidden" name="message" value="<?php echo $message; ?>">
                 <p class="kakunin_title">お問い合わせ内容がよろしければ、「送信する」ボタンを押して下さい。</p>
                 <div>
@@ -112,7 +109,7 @@ EOM;
                     </div>
                     <div>
                         <label>件名</label>
-                        <p><?php echo $subject; ?></p>
+                        <p><?php echo $kenmei; ?></p>
                     </div>
                     <div>
                         <label>お問い合わせ内容</label>
