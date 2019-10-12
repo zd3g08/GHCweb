@@ -4,6 +4,20 @@ function he($str){
     return htmlentities($str, ENT_QUOTES, "UTF-8");
 }
 
+$page_error = ""; // エラーメッセージ
+// エラーチェック
+if (isset($_POST["submit"])) {
+    if ($email == "") {
+        $page_error = "メールアドレスを入力してください\n";
+    }
+    if ($page_error == "") {
+        if (!preg_match('/^([a-zA-Z0-9\.\_\-\+\?\#\&\%])*@([a-zA-Z0-9\_\-])+([a-zA-Z0-9\.\_\-]+)+$/', $email)) {
+            $page_error = "メールアドレスを正しく入力してください\n";
+        }
+    }
+}
+
+
     // フォームのボタンが押されたら
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // フォームから送信されたデータを各変数に格納
@@ -14,7 +28,7 @@ function he($str){
     }
 
     // 送信ボタンが押されたら
-    if (isset($_POST["submit"])) {
+    if (isset($_POST["submit"]) && $page_error == "") {
         // 送信ボタンが押された時に動作する処理をここに記述する
 
         // 日本語をメールで送る場合のおまじない
@@ -105,11 +119,11 @@ EOM;
                 <p class="kakunin_title">お問い合わせ内容がよろしければ、「送信する」ボタンを押して下さい。</p>
                 <div>
                     <div>
-                        <label>お名前</label>
+                        <label>お名前</label><!-- <span class="error_text"><?php echo he($page_error); ?></span> -->
                         <p><?php echo he($name); ?></p>
                     </div>
                     <div>
-                        <label>メールアドレス</label>
+                        <label>メールアドレス</label><span class="error_text"><?php echo he($page_error); ?></span>
                         <p><?php echo he($email); ?></p>
                     </div>
                     <div>
@@ -117,7 +131,7 @@ EOM;
                         <p><?php echo he($kenmei); ?></p>
                     </div>
                     <div>
-                        <label>お問い合わせ内容</label>
+                        <label>お問い合わせ内容</label><!-- <span class="error_text"><?php echo he($page_error); ?></span> -->
                         <p><?php echo nl2br(he($message)); ?></p>
                     </div>
                 </div>

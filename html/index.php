@@ -147,14 +147,17 @@ function he($str){
         <section class="contact"  id="contact">
             <article>
             <h3>CONTACT</h3>
-        <p class="contact_title">内容をご入力の上「確認画面へ」ボタンをクリックしてください。</p>
-                <div id="form-main">
-                    <div id="form-div">
-                        <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
+         <p class="contact_title">内容をご入力の上「確認画面へ」ボタンをクリックしてください。</p>
+<!--                 <div id="form-main">
+                    <div id="form-div"> -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeM6_JBsLs-8CDI0O4Q9L_C1b4aL8vu1lLfvxpFWOHV4rTrwg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+
+<!--                         <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
                             <p class="name">
                                 <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="お名前" value="<?php echo he($name); ?>" id="name" />
                             </p>
                             <p class="email">
+<?php echo he($page_error); ?>
                                 <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="メールアドレス" value="<?php echo he($email); ?>" />
                             </p>
                             <p class="kenmei">
@@ -164,11 +167,11 @@ function he($str){
                                 <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="message" placeholder="本文"><?php echo he($message); ?></textarea>
                             </p>
                             <div class="submit">
-                                        <button type="submit" id="button-blue">確認画面へ</button>
+                                        <button type="submit" name="confirm" id="button-blue">確認画面へ</button>
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </article>
         </section><!-- contactここまで -->
     </main>
