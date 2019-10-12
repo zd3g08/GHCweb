@@ -16,6 +16,7 @@ function he($str){
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body id="top">
@@ -62,7 +63,7 @@ function he($str){
             </article>
         </section><!-- newsここまで -->
         <section class="about" id="about">
-            <article>
+            <article data-aos="fade-up">
                 <h3>About Us</h3>
                 <p>株式会社GHCは、エグゼクティブクラスのヘッドハンティングを中心とした人財紹介会社として、2014年に設立されました。</p>
                 <p>社長・役員・経営幹部・士業など、ハイキャリアな方々のキャリアコンサルティングを専門としております。</p>
@@ -70,7 +71,7 @@ function he($str){
             </article>
         </section><!-- aboutここまで -->
         <section class="service" id="service">
-            <article>
+            <article data-aos="fade-up">
                 <h3>Service</h3>
                 <p>株式会社GHCのミッションは、<br><span>「人と人とのご縁を作ることで、社会の発展に貢献する」</span><br>こと。</p>
                 <p><i class="fa fa-handshake-o fa-2x" aria-hidden="true"></i></p>
@@ -81,7 +82,7 @@ function he($str){
             </figure>
         </section><!-- serviceここまで -->
         <section class="ceo" id="ceo">
-            <article>
+            <article data-aos="fade-left">
                 <h3>CEO&nbsp;Profile</h3>
                 <h4>代表取締役&nbsp;&nbsp;川上光彦のご紹介</h4>
                 <p>六甲学院中学校・高等学校卒業。
@@ -95,7 +96,7 @@ function he($str){
         </section>
         <section class="company" id="company">
             <h3>COMPANY</h3>
-            <article>
+            <article data-aos="fade-up">
                 <table>
                     <tr>
                         <th>会社名</th>
@@ -188,6 +189,7 @@ function he($str){
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 /*topへ戻るボタン*/
 $(function() {
@@ -217,5 +219,8 @@ $(function() {
         return false;
     });
 });
+</script>
+<script>
+  AOS.init();
 </script>
 </html>
