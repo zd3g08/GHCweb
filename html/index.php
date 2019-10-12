@@ -147,7 +147,7 @@ function he($str){
         <section class="contact"  id="contact">
             <article>
             <h3>CONTACT</h3>
-         <p class="contact_title">内容をご入力の上「確認画面へ」ボタンをクリックしてください。</p>
+         <p class="contact_title">GHCへのお問合せは、以下のフォームからお願いいたします。</p>
 <!--                 <div id="form-main">
                     <div id="form-div"> -->
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeM6_JBsLs-8CDI0O4Q9L_C1b4aL8vu1lLfvxpFWOHV4rTrwg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
