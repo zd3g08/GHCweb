@@ -213,7 +213,7 @@ section.title {
             center 135px,
             center 145px;
         background-size: contain;
-        opacity: .8;
+        opacity: .9;
         z-index: 3;
     }
     div.title_text {
@@ -222,7 +222,7 @@ section.title {
         left: 0;
         right: 0;
         width: 100%;
-        height: 63px;
+        height: 85px;
         margin: 0 auto;
         text-align: center;
         color: #fff;
@@ -236,10 +236,11 @@ section.title {
                 line-height: 2rem;
             }
             h5 {
-                font-size: 1.5rem;
+                font-size: 2rem;
                 font-family: 'Rajdhani', sans-serif;
                 font-weight: normal;
                 letter-spacing: .05rem;
+                line-height: 2rem;
             }
     }
 }
