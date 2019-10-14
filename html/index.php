@@ -31,9 +31,16 @@ function he($str){
             <div class="title_logo"></div>
             <div class="title_text">
                 <h1>Executive&nbsp;Search&nbsp;Firm</h1>
-                <h5>Good&nbsp;Hospitality&nbsp;Consulting</h5>
+                <!-- <h5>Good&nbsp;Hospitality&nbsp;Consulting</h5> -->
             </div>
-            <div class="grade"></div>
+<!--             <div class="grade">
+            <i class="fa fa-comments-o fa-2x" aria-hidden="true"><br><span>About</span></i>
+            <i class="fa fa-handshake-o fa-2x" aria-hidden="true"><br><span>Service</span></i>
+            <i class="fa fa-user-circle fa-2x" aria-hidden="true"><br><span>Ceo</span></i>
+            <i class="fa fa-building fa-2x" aria-hidden="true"><br><span>Campany</span></i>
+            <i class="fa fa-map-marker fa-2x" aria-hidden="true"><br><span>Access</span></i>
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"><br><span>Contact</span></i>
+            </div> -->
         </section>
     </header>
     <div class="box">
@@ -59,7 +66,7 @@ function he($str){
         <section class="news">
             <h3>NEWS</h3>
             <article>
-                2019年10月15日&nbsp;&nbsp;Webサイトをリニューアル
+                    <time datetime="2019-10-13">2019年10月13日</time>&nbsp;&nbsp;Webサイトをリニューアル
             </article>
         </section><!-- newsここまで -->
         <section class="about" id="about">
@@ -73,7 +80,7 @@ function he($str){
         <section class="service" id="service">
             <article data-aos="fade-up">
                 <h3>Service</h3>
-                <p>株式会社GHCのミッションは、<br><span>「人と人とのご縁を作ることで、社会の発展に貢献する」</span><br>こと。</p>
+                <p>株式会社GHCのミッションは、<br><span>人と人とのご縁を作ることで社会の発展に貢献すること</span></p>
                 <p><i class="fa fa-handshake-o fa-2x" aria-hidden="true"></i></p>
                 <p class="honne">ご相談者と長期的な関係構築を目指し、本音トークで納得のいくキャリア設計を、興味・能力・価値観・その他特性をもとに、ご支援いたします。</p>
             </article>
@@ -86,8 +93,8 @@ function he($str){
                 <h3>CEO&nbsp;Profile</h3>
                 <h4>代表取締役&nbsp;&nbsp;川上光彦のご紹介</h4>
                 <p>六甲学院中学校・高等学校卒業。
-                    一橋大学法学部卒業。三菱商事株式会社入社。金属グループ貴金属部に配属され、貴金属ディーリング、実需取引、宝飾品事業に従事。１０年間勤務後に起業独立。日印貿易、日中貿易、経営コンサル、M&Aコンサルを行う。</p>
-                <p>2012年よりエグゼクティブサーチのコンサルタントに従事。2014年株式会社GHCを設立。</p>
+                    一橋大学法学部卒業。三菱商事株式会社入社。金属グループ貴金属部に配属され、貴金属ディーリング、実需取引、宝飾品事業に従事。１０年間勤務後に起業独立。日印貿易、日中貿易、経営コンサル、M&Aコンサルを行う。2012年よりエグゼクティブサーチのコンサルタントに従事。2014年株式会社GHCを設立。
+                </p>
             </article>
         </section><!-- ceoここまで -->
         <section class="triangle_2">
@@ -146,13 +153,13 @@ function he($str){
         </section><!-- accessここまで -->
 
         <section class="contact"  id="contact">
-            <article>
+            <article id="googleform">
             <h3>CONTACT</h3>
          <p class="contact_title">GHCへのお問合せは、以下のフォームからお願いいたします。</p>
-<!--                 <div id="form-main">
-                    <div id="form-div"> -->
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeM6_JBsLs-8CDI0O4Q9L_C1b4aL8vu1lLfvxpFWOHV4rTrwg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 
+<!--                 <div id="form-main">
+                    <div id="form-div"> -->
 <!--                         <form class="form" id="form1" action="confirm.php" method="post" name="form" onsubmit="return validate()">
                             <p class="name">
                                 <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="お名前" value="<?php echo he($name); ?>" id="name" />
@@ -190,6 +197,7 @@ function he($str){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script type="text/javascript" src="sample.js"></script> -->
 <script>
 /*topへ戻るボタン*/
 $(function() {
@@ -223,4 +231,37 @@ $(function() {
 <script>
   AOS.init();
 </script>
+<!-- <script>
+    $(document).ready(function () {
+    $("#googleform").submit(function (event) {
+        var name = $("#googleform input[name=name]").val();
+        var email = $("#googleform input[name=email]").val();
+        var message = $("#googleform textarea[name=message]").val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSeM6_JBsLs-8CDI0O4Q9L_C1b4aL8vu1lLfvxpFWOHV4rTrwg/formResponse?embedded=true",
+            data: {
+                "entry.932565245": name,
+                "entry.1847117979": email,
+                "entry.654007863": message
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function () {
+                    //送信に成功したときの処理
+                    $("form").slideUp();
+                    $('#success').slideDown();
+                },
+                200: function () {
+                    //送信に失敗したときの処理
+                    $("form").slideUp();
+                    $('#error').slideDown();
+                }
+            }
+        });
+        event.preventDefault();
+    });
+});
+</script> -->
 </html>

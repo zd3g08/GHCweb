@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aguafina+Script|Italianno|Kristi|Meddon|Mrs+Saint+Delafield|Mrs+Sheppards|Norican|Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800|Exo:900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Montserrat+Subrayada|Rubik+Mono+One|Russo+One&display=swap');
 html {
     font-size: 93%;
 }
@@ -40,7 +43,7 @@ a:hover{
     bottom: 0px;
     right: 0px;
     font-size: .5rem;
-    z-index: 2000;
+    z-index: 9999;
     opacity: .9
 }
 
@@ -68,7 +71,7 @@ a:hover{
 
 .box {
  position: absolute;
-  top: -390px;
+  top: -480px;
   width: 50px;
   height: 100px;
   margin: 0 auto;
@@ -78,7 +81,7 @@ a:hover{
 }
 .box2 {
  position: absolute;
-  top: -270px;
+  top: -370px;
   width: 50px;
   height: 100px;
   margin: 0 auto;
@@ -88,7 +91,7 @@ a:hover{
 }
 .box3 {
  position: absolute;
-  top: 1130px;
+  top: 1030px;
   width: 50px;
   height: 100px;
   margin: 0 auto;
@@ -194,9 +197,10 @@ section.title {
         margin: 0 auto;
     div.title_logo {
         position: absolute;
+        top: -50px;
         left: 0;
         right: 0;
-        max-width: 450px;
+        max-width: 500px;
         height: 100vh;
         margin: 0 auto;
         background:
@@ -216,24 +220,50 @@ section.title {
         opacity: .9;
         z-index: 3;
     }
+    div.grade {
+            position: absolute;
+            top: 300px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            color: rgba(#fff,.9);
+            font-size: 1rem;
+            line-height: .5rem;
+            z-index: 3;
+            span {
+              font-size: .6rem;
+              line-height: .1rem;
+
+            }
+    }
     div.title_text {
         position: absolute;
-        top: 350px;
+        top: 290px;
         left: 0;
         right: 0;
         width: 100%;
-        height: 85px;
+        height: 45px;
         margin: 0 auto;
         text-align: center;
-        color: #fff;
-        border-bottom: 1px solid rgba(#fff,.7);
+        color: rgba(#fff,.9);
+        background-color: rgba(#db143c,.1);
+        // border-bottom: 1px solid rgba(#fff,.7);
         z-index: 3;
             h1 {
-                font-size: 1.2rem;
-                font-family: 'Rajdhani', sans-serif;
+                font-size: 200%;
+// font-family: 'Coda Caption', sans-serif;
+font-family: 'Oswald', sans-serif;
+// font-family: 'Archivo Black', sans-serif;
+// font-family: 'Russo One', sans-serif;
+// font-family: 'Montserrat Subrayada', sans-serif;
+// font-family: 'Rubik Mono One', sans-serif;
+
                 font-weight: normal;
-                letter-spacing: .1rem;
-                line-height: 2rem;
+                letter-spacing: .2px;
+                // line-height: 3.8rem;
+                vertical-align: middle;
             }
             h5 {
                 font-size: 2rem;
@@ -260,13 +290,13 @@ background:-webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(
 
 main {
     position: relative;
-    top: -500px;
+    top: -600px;
     height: 3800px;
     z-index: 4;
     h3 {
         margin: 25px 0 0 0;
         font-size: 1.4rem;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 1.35px;
         font-weight: normal;
     }
@@ -345,11 +375,16 @@ section.triangle_2 {
     h3 {
                 margin: 20px 0 20px 0;
                 font-size: 3rem;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 letter-spacing: 1.35px;
                 font-weight: 800;
                 color: #fff;
         }
+      article {
+        font-size: .9rem;
+        line-height: 1.75rem;
+        text-align: center;
+      }
 }
 .about {
     position: relative;
@@ -363,20 +398,21 @@ section.triangle_2 {
     border: none;
         article {
         position: absolute;
-        width: 60%;
+        width: 70%;
         margin-left: 30%;
         text-align: left;
             h3 {
                 margin: 20px 0 20px 0;
                 font-size: 3rem;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 letter-spacing: 1.35px;
                 font-weight: 800;
                 color: #fff;
+                border-bottom: 2px solid rgba(#fff,.8);
             }
             p{
               color: #fff;
-              margin: 10px 0;
+              margin: 10px 10% 10px 0;
               line-height: 1.75rem;
               text-align: justify;
               text-justify: inter-ideograph;
@@ -412,10 +448,12 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 1%,rg
             h3 {
                 margin: 20px 0 20px 0;
                 font-size: 3rem;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 letter-spacing: 1px;
                 font-weight: 800;
                 color: #fff;
+                border-bottom: 2px solid rgba(#fff,.8);
+                border-width: 70%;
             }
             p{
               color: #fff;
@@ -482,10 +520,11 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
             h3 {
                 margin: 25px 0 5px 0;
                 font-size: 3rem;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 letter-spacing: 1px;
                 font-weight: 800;
                 color: #fff;
+                border-bottom: 2px solid rgba(#fff,.8);
             }
             h4 {
                 font-size: .9rem;
@@ -527,12 +566,13 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
     border-top: 1px solid rgba(#fff,.3);
     border-bottom: 1px solid rgba(#fff,.3);
     h3 {
-        margin: 35px 0 25px 0;
+        margin: 35px 10% 25px 10%;
         font-size: 3rem;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 1.35px;
         font-weight: 800;
         color: #fff;
+        border-bottom: 2px solid rgba(#fff,.8);
     }
     table {
         width: 90%;
@@ -569,10 +609,12 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
             h3 {
                 margin: 20px 0 20px 0;
                 font-size: 3rem;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Oswald', sans-serif;
                 letter-spacing: 1.35px;
                 font-weight: 800;
                 color: #fff;
+                border-bottom: 2px solid rgba(#fff,.8);
+                border-width: 70%;
             }
         article {
         position: absolute;
@@ -646,7 +688,7 @@ background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba
     h3 {
         margin: 35px 0 25px 0;
         font-size: 3rem;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 1.35px;
         font-weight: 800;
         color: #fff;
@@ -684,7 +726,7 @@ span.error_text {
     h3 {
         margin: 40px 0 15px 0;
         font-size: 2rem;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 1.35px;
         font-weight: 800;
     }
@@ -895,7 +937,7 @@ footer {
     h3 {
         margin: 15px 0 15px 0;
         font-size: 1.5rem;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Oswald', sans-serif;
         font-weight: 800;
         letter-spacing: 1.35px;
     }
